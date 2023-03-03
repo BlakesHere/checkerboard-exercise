@@ -1,19 +1,18 @@
+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;
+
 // Your JS goes here
 
 function checkerBoard() {
   let board = document.createElement("div");
   let a = true;
   for (let i = 0; i < 63; i++) {
-    if (a) {
-      const square = createSquare();
-      square.style.backgroundColor = "black";
-      board.appendChild(square);
-    } else if (!a) {
-      const square = createSquare();
-      square.style.backgroundColor = "red";
-      board.appendChild(square);
-    }
-    a = !a;
+    let color1 = Math.random() * 255;
+    let color2 = Math.random() * 255;
+    let color3 = Math.random() * 255;
+    const square = createSquare();
+    square.style.backgroundColor =
+      "rgb(" + color1 + "," + color2 + "," + color3 + ")";
+    board.appendChild(square);
   }
   return board;
 }
